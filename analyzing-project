@@ -1,0 +1,64 @@
+EXPLORING THE PROJECT STRUCTURE: 
+<br>
+c-calculator/
+├── README.md
+├── calculator.c
+└── calculator.h
+<br>
+
+the README.md contains information about the project, description or usage directions. 
+It contains rationale (why this project was created), features and known issues, how to use the calculator, and building (steps) of the calculator.
+
+<br>
+the calculator.c file contains the implementations of the functions declared in `calculator.h`.
+calulator.c includes following functions: 
+<br>
+//function to add number
+double add(double a, double b) {
+    return a + b;
+}
+
+//function to subtract the second number from the first
+double subtract(double a, double b) {
+    return a - b;
+}
+
+//function to multiply two numbers
+double multiply(double a, double b) {
+    return a * b;
+}
+
+//function to divide the first number by the second
+double divide(double a, double b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        fprintf(stderr, "Error: Division by zero\n");
+        exit(EXIT_FAILURE);
+    }
+}
+
+//function to raise the base to the power of the exponent
+double power(double base, double exponent) {
+    return pow(base, exponent);
+}
+
+//function to calculate the square root of a number
+double sqrt_custom(double a) {
+    if (a >= 0) {
+        return sqrt(a);
+    } else {
+        fprintf(stderr, "Error: Negative input for square root\n");
+        exit(EXIT_FAILURE);
+    }
+}
+
+
+<br><br>
+the calculator.h file contains the function prototypes and necessary definitions. <br>
+double add(double a, double b);<br>
+double subtract(double a, double b);<br>
+double multiply(double a, double b);<br>
+double divide(double a, double b);<br>
+double power(double base, double exponent);<br>
+double sqrt_custom(double a);<br>
